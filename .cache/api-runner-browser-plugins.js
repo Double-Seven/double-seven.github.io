@@ -1,6 +1,6 @@
 module.exports = [{
       plugin: require('../node_modules/gatsby-plugin-mdx/gatsby-browser.js'),
-      options: {"plugins":[{"resolve":"/Users/akira77/Programming/Project/personalWeb/double-seven.github.io/double-seven.github.io/node_modules/gatsby-remark-images","id":"cbd6a20a-6992-5a3e-979d-55e9255a9bfa","name":"gatsby-remark-images","version":"3.3.13","pluginOptions":{"plugins":[],"maxWidth":960,"quality":90,"linkImagesToOriginal":false},"nodeAPIs":[],"browserAPIs":["onRouteUpdate"],"ssrAPIs":[]}],"extensions":[".mdx",".md"],"gatsbyRemarkPlugins":[{"resolve":"gatsby-remark-images","options":{"maxWidth":960,"quality":90,"linkImagesToOriginal":false}}]},
+      options: {"plugins":[{"resolve":"/Users/akira77/Programming/Project/personalWeb/double-seven.github.io/node_modules/gatsby-remark-images","id":"cbd6a20a-6992-5a3e-979d-55e9255a9bfa","name":"gatsby-remark-images","version":"3.3.13","pluginOptions":{"plugins":[],"maxWidth":960,"quality":90,"linkImagesToOriginal":false},"nodeAPIs":[],"browserAPIs":["onRouteUpdate"],"ssrAPIs":[]}],"extensions":[".mdx",".md"],"gatsbyRemarkPlugins":[{"resolve":"gatsby-remark-images","options":{"maxWidth":960,"quality":90,"linkImagesToOriginal":false}}]},
     },{
       plugin: require('../node_modules/gatsby-remark-images/gatsby-browser.js'),
       options: {"plugins":[],"maxWidth":960,"quality":90,"linkImagesToOriginal":false},
