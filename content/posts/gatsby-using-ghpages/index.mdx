@@ -1,0 +1,75 @@
+---
+title: How to create a personal blog using Gatsby theme
+date: 2020-06-30
+tags:
+  - static website
+---
+
+#### Brief:
+This post will create a static personal blog using Gatsby themes and deploy the website using Github pages. (the domain of our website will be the github repository name) 
+Ref: (https://zhuanlan.zhihu.com/p/101565299)
+
+---
+#### Create a Gatsby project file:
+- Install Gatsby globally by running:
+```
+npm install -g gatsby-cli
+```
+- Create GitHub Pages repo:  
+Create a repo in our GitHub names "double-seven.github.io". We can see the Pages setting in our repo setting tab. Then clone our repo in our computer.
+- Create Gatsby projects files in our Git repository by running:
+```
+gatsby https://github.com/LekoArts/gatsby-starter-minimal-blog
+```
+Ref: (https://www.gatsbyjs.cn/tutorial/using-a-theme/)
+- Create a new branch for our repo:
+Create a new branch for our repo (the branch calls "dev" for my website) and set it as default. Since GitHub Pages will use only the master branch as the public folder to generate the website, so we will put all source codes in "dev" branch.
+---
+
+#### Development mode:
+- cd to our repo folder
+- Change to development mode by running:
+```
+gatsby develop
+```
+- Now we can see our website at http://localhost:8000 (or http://127.0.0.1:8000/)
+- To quit the development mode, press "control + c"
+---
+#### Build and deploy our website:
+
+- Build by running:
+```
+gatsby build
+```
+It will build our website in the public folder based on our changes of source codes.
+
+- Build and Deploy:  
+1. Install gh-pages by running： 
+```
+npm install gh-pages --save-dev
+```
+2. In "package.json", add a new script (we will use it in step 3)
+```js
+{
+  "scripts": {
+    "deploy": "gatsby build && gh-pages -d public -b master"
+  }
+}
+```
+This script will build our website in "public" folder and deploy the built "public" folder to our master branch. So when we switch to master branch, our repo will become the "public" folder. And when we switch back to dev branch, our repo is the original Gatsby project folder.  
+
+3. Run the deploy script by running:
+```
+npm run deploy
+```
+And remember to commit and push all changes in dev branch.  
+- NOTE: Everytime we wanna update our website we have to repeat the step 3, and the changes will be updated on our website in about 10 minutes.   
+
+Ref:（https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/）
+
+---
+
+#### About create new posts：
+Using .mdx file which allows you to use Markdown(轻量级标记语言) and JSX.
+(https://www.markdownguide.org/basic-syntax/)
+(https://www.gatsbyjs.org/docs/mdx/#whats-mdx)
